@@ -48,6 +48,6 @@ export const getAllHotels = async (req, res, next) => {
         res.status(200).json(hotels);
     }
     catch (err) {
-        next(err)
+        next(err);
     }
 }
