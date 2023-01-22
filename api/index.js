@@ -1,3 +1,4 @@
+import cors from 'cors';
 import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
@@ -28,6 +29,7 @@ mongoose.connection.on("disconnected", () => {
 
 
 //middlewares
+app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 
